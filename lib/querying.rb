@@ -32,6 +32,7 @@ end
 
 def select_character_names_and_number_of_books_they_are_in
   SELECT characters.name, SUM(books.id) FROM character_books
-  JOIN books WHERE books_id = character_books.books_id
+  INNER JOIN books WHERE books_id = character_books.book_id
+  INNER JOIN characters where characters_id = character_books.character_id
   
 end
