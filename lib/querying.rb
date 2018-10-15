@@ -12,8 +12,9 @@ end
 
 
 def select_value_and_count_of_most_prolific_species
-  SELECT SUM(book.id) FROM 
-  INNER JOIN
+  SELECT SUM(books.id) FROM books
+  INNER JOIN series where series.id = books_series.id
+  GROUP BY SUM(books.id) LIMIT 1
 end
 
 def select_name_and_series_subgenres_of_authors
