@@ -1,10 +1,10 @@
-CREATE TABLE Series (
+CREATE TABLE series (
 id INTEGER PRIMARY KEY,
 title TEXT,
 author_id INTEGER,
-sub_genre TEXT);
+subgenre_id TEXT);
 
-CREATE TABLE Sub_genre (
+CREATE TABLE subgenres (
 id INTEGER PRIMARY KEY,
 name TEXT);
 
