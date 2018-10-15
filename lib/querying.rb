@@ -34,5 +34,4 @@ def select_character_names_and_number_of_books_they_are_in
   SELECT characters.name, SUM(books.id) FROM characters
   JOIN books WHERE books.series_id = characters.series_id
   
-  
 end
