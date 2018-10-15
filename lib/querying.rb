@@ -22,9 +22,9 @@ def select_name_and_series_subgenres_of_authors
 end
 
 def select_series_title_with_most_human_characters
-  SELECT series.title FROM series 
+  SELECT series.title, SUM(series.id) FROM series 
   JOIN characters WHERE series.id = characters_series.id
-  GROUP BY characters.species 
+  GROUP BY characters.species HAVING 
   
 end
 
