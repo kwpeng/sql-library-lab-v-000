@@ -19,7 +19,7 @@ year INTEGER,
 series_id INTEGER,
 );
 
-CREATE Characters (
+CREATE characters (
 id INTEGER PRIMARY KEY,
 name TEXT,
 motto TEXT,
