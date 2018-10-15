@@ -20,8 +20,8 @@ end
 
 def select_name_and_series_subgenres_of_authors
  "SELECT authors.name, series.title, subgenres.name FROM series
-  INNER JOIN authors WHERE authors.id = series.authors_id
-  JOIN subgenres WHERE subgenres_id = series.subgenres_id"
+  JOIN authors ON authors.id = series.authors_id
+  JOIN subgenres ON subgenres_id = series.subgenres_id"
 end
 
 def select_series_title_with_most_human_characters
