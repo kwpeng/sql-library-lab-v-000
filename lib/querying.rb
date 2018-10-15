@@ -13,7 +13,7 @@ end
 
 def select_value_and_count_of_most_prolific_species
   "SELECT characters.species, COUNT(characters.species) FROM characters
-  HAVING MAX(SUM(characters.species))"
+  HAVING MAX(COUNT(characters.species))"
 end
 
 def select_name_and_series_subgenres_of_authors
