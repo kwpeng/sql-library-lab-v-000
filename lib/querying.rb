@@ -12,8 +12,8 @@ end
 
 
 def select_value_and_count_of_most_prolific_species
-  "SELECT SUM(characters.species) FROM characters
-  INNER JOIN series where series.id = books_series.id
+  "SELECT characters.species, SUM(characters.species) FROM characters
+  JOIN series where series.id = books_series.id
   GROUP BY SUM(books.id) LIMIT 1"
 end
 
